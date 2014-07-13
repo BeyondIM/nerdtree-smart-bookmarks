@@ -4,8 +4,6 @@ set cpo&vim
 " Prepare {{{1
 
 let s:isWin = has('win32') || has('win64')
-let s:isMac = has('unix') && substitute(system('uname'), '\n', '', '') =~# 'Darwin\|Mac' 
-let s:isLinux = has('unix') && substitute(system('uname'), '\n', '', '') ==# 'Linux' 
 
 " Check file whether is readable {{{2
 function! s:CheckFileReadable(file)

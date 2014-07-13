@@ -11,7 +11,10 @@ if !exists('g:mapleader')
     let g:mapleader=","
 endif
 nnoremap <silent> <Leader>nb :<C-U>call nsb#init()<CR>
-autocmd VimLeavePre * call nsb#writeParams()
+augroup smartBookmarks
+    autocmd!
+    autocmd VimLeavePre * call nsb#writeParams()
+augroup END
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
